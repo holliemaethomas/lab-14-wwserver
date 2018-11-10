@@ -118,23 +118,26 @@
 
         <script>
 
-          let googleURL = "https://accounts.google.com/o/oauth2/v2/auth";
+          // let googleURL = "https://accounts.google.com/o/oauth2/v2/auth";
+          let facbookURL = "https://graph.facebook.com/oauth/access_token";
 
           let options = {
             client_id:'',
+            client_secret:'',
             redirect_uri: 'http://localhost:3000/oauth',
-            scope: 'email openid profile',
-            prompt: 'consent',
-            response_type: 'code'
+            grant_type: 'client_credentials',
+            // scope: 'email openid profile',
+            // prompt: 'consent',
+            // response_type: 'code'
           }
 
           let QueryString = Object.keys(options).map( (key,i) => {
             return `${key}=` + encodeURIComponent(options[key]);
           }).join("&");
 
-          let authURL = `${googleURL}?${QueryString}`;
+          let authURL = `${facebookURL}?${QueryString}`;
 
-          $('#oauth').append(`<a href="${authURL}">Login With Google</a>`);
+          $('#oauth').append(`<a href="${authURL}">Login With Facebook</a>`);
 
         </script>
 
