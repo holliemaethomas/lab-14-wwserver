@@ -1,16 +1,25 @@
 {
-  "name": "web-server",
+  "name": "lab-14-wwserver",
   "version": "1.0.0",
-  "description": "",
+  "description": "Seperate repository for lab 14 web server",
   "main": "index.js",
-  "scripts": {
-    "test": "jest",
-    "start": "node index.js"
+  "scripts": {    
+    "lint": "eslint **/*.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/holliemaethomas/lab-14-wwserver.git"
   },
   "author": "",
   "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/holliemaethomas/lab-14-wwserver/issues"
+  },
+  "homepage": "https://github.com/holliemaethomas/lab-14-wwserver#readme",
   "dependencies": {
-    "express": "^4.16.3",
-    "jest": "^23.1.0"
+    "eslint": "^5.9.0",
+    "express": "^4.16.4",
+    "jest": "^23.6.0"
   }
 }
